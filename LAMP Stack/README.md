@@ -126,11 +126,11 @@ The instance will be running within 1-2 minutes. Connect via SSH:
 chmod 400 igwe-ec2.pem
 ```
 
-![EC2 instance](./AWS-EC2-instance.png 'AWS Instance')
+![EC2 instance](./assets/AWS-EC2-instance.png 'AWS Instance')
 
 ### Security Group - Inbound Rule
 
-![Inbount Rule](./inbound-rule.png 'Inbound Rule')
+![Inbount Rule](./assets/inbound-rule.png 'Inbound Rule')
 
 ### Connecting to your EC2 Instance using SSH
 
@@ -140,9 +140,9 @@ ssh -i "igwe-ec2.pem" ubuntu@ec2-16-171-142-90.eu-north-1.compute.amazonaws.com
 
 ### Terminal Output
 
-![ssh into server](./ssh1.png 'Output 1')
+![ssh into server](./assets/ssh1.png 'Output 1')
 
-![ssh into server](./ssh2.png 'Output 2')
+![ssh into server](./assets/ssh2.png 'Output 2')
 
 # Installing Apache and Updating the Firewall
 
@@ -161,7 +161,7 @@ $ sudo apt install apache2
 $ sudo systemctl status apache2
 ```
 
-![Running apache service](./apache-running.png 'Apache running')
+![Running apache service](./assets/apache-running.png 'Apache running')
 
 ### Accessing our Apache Server locally in our ubuntu shell
 
@@ -181,7 +181,7 @@ http://172.31.39.182:80
 
 ### The browser output
 
-![Apache browser output](./apache-browser-result.png 'Apache Browser Output')
+![Apache browser output](./assets/apache-browser-result.png 'Apache Browser Output')
 
 # Installing MySQL
 
@@ -189,7 +189,7 @@ http://172.31.39.182:80
 sudo apt install mysql-server
 ```
 
-![MySQL Installation](./mysql-installation.png 'MySQL Installation')
+![MySQL Installation](./assets/mysql-installation.png 'MySQL Installation')
 
 ### Installin MySQL Secure Installation
 
@@ -206,7 +206,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 sudo apt install mysql_secure_installation
 ```
 
-![MySQL Secure Installation](./mysql-secure-installation.png 'MySQL Secure Installation')
+![MySQL Secure Installation](./assets/mysql-secure-installation.png 'MySQL Secure Installation')
 Now mysql is pretty much secured and prevents test user and test database for external or remote access.
 
 # Installing PHP
@@ -223,7 +223,7 @@ sudo apt install libapache2-mod-php
 sudo apt install php-mysql
 ```
 
-![PHP Installation](./php-installation.png 'PHP Installation')
+![PHP Installation](./assets/php-installation.png 'PHP Installation')
 
 ## Creating a Virtual Host for Website using Apache
 
@@ -261,10 +261,10 @@ sudo vim /etc/apache2/sites-available/igwe.config
 - Create an index.html file in igwe directory to display on the browser
 
 _Apache2 Public IP browser Output_
-![Apache2 Public IP Output](./apache-ip-output.png 'Apache2 Public IP Output')
+![Apache2 Public IP Output](./assets/apache-ip-output.png 'Apache2 Public IP Output')
 
 _Apache2 Public DNS browser Output_
-![Apache2 DNS Output](./apache-DNS-output.png 'Apache2 DNS Output')
+![Apache2 DNS Output](./assets/apache-DNS-output.png 'Apache2 DNS Output')
 
 ## Enable PHP on the website
 
@@ -305,4 +305,4 @@ $ sudo vim /var/www/igwe/index.php
 
 _PHP Info Output_
 
-![PHP Info Output](./phpinfo-output.png 'PHP Info Output')
+![PHP Info Output](./assets/phpinfo-output.png 'PHP Info Output')
