@@ -191,7 +191,7 @@ sudo apt install mysql-server
 
 ![MySQL Installation](./assets/mysql-installation.png 'MySQL Installation')
 
-### Installin MySQL Secure Installation
+### Installing MySQL Secure Installation
 
 - Set password for root user at the mysql already running:
 
