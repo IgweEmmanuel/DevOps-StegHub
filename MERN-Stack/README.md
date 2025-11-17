@@ -196,6 +196,9 @@ pm2 startup
 ## MongoDB Atlas Configuration
 
 1. Create cluster at https://www.mongodb.com/cloud/atlas
+
+!['Cluster Connect'](./assets/cluster_connect.png 'Custer connect')
+
 2. Create database user with password
 3. Whitelist EC2 IP or allow all (0.0.0.0/0)
 4. Copy connection string to `.env` file
@@ -277,19 +280,31 @@ pm2 delete all          # Remove all apps
 **Backend won't start:**
 
 - Check MongoDB connection string in `.env`
+
+!['Cluster Connec Info'](./assets/cluster_connect_info.png 'Custer connect info')
+
 - Verify MongoDB Atlas IP whitelist
 - Check port 5000 is not in use: `lsof -i :5000`
 
 **Frontend can't connect to backend:**
 
 - Verify proxy setting in `client/package.json`: `"proxy": "http://localhost:5000"`
+
+![Proxy in package.json](./assets/proxy.png 'Proxy in package.json')
+
 - Check backend is running on port 5000
 - Verify CORS is enabled in backend
 
 **EC2 connection issues:**
 
 - Check security group allows required ports
+
+!['EC2 Instance security group'](./assets/inbound_rules.png 'EC2 Instance security group')
+
 - Verify EC2 instance is running
+
+!['EC2 Instance'](./assets/EC2_instance.png 'EC2 Instance')
+
 - Check firewall: `sudo ufw status`
 
 ## Security Best Practices
@@ -322,6 +337,10 @@ pm2 delete all          # Remove all apps
 - react: ^19.2.0
 - axios: ^1.13.2
 - react-scripts: 5.0.1
+
+## Result
+
+![Todo App](./assets/todo.png 'Todo App')
 
 ## Resources
 
